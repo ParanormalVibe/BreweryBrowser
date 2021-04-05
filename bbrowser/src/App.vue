@@ -1,5 +1,5 @@
 <template>
-  <div id="app-container">
+  <div id="app-container" class="container">
     <Banner />
     <SearchForm />
     <SearchResultList />
