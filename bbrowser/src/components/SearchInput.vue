@@ -1,10 +1,20 @@
 <template>
-  <input type="text" class="form-control" placeholder="" aria-label="Search field">
+  <input type="text" v-model="query" class="form-control" placeholder="" aria-label="Search field">
 </template>
 
 <script>
 export default {
-  name: "SearchInput"
+  name: "SearchInput",
+  computed: {
+    query: {
+      get() {
+        return this.$store.state.searchQuery
+      },
+      set(value) {
+        this.$store.commit('updateSearchQuery', value)
+      }
+    }
+  }
 }
 </script>
 
