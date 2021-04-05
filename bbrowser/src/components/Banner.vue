@@ -10,7 +10,7 @@ name: "Banner"
 
 <style scoped>
   .banner {
-    width: 600px;
+    width: 700px;
     margin: 50px auto;
   }
 </style>
