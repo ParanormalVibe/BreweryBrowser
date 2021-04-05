@@ -28,6 +28,7 @@ export default {
 <style scoped>
 .search-result {
   width: 600px;
+  margin-bottom: 50px;
 }
 span {
   color: white;
