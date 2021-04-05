@@ -29,4 +29,15 @@ export default {
 .search-result {
   width: 600px;
 }
+span {
+  color: white;
+}
+.left-details {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.right-details {
+  text-align: right;
+}
 </style>
