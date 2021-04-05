@@ -1,7 +1,7 @@
 <template>
   <div class="search-form input-group mb-5">
     <SearchInput />
-    <SearchButton />
+    <SearchButton @submit="onSubmit" />
   </div>
 </template>
 
@@ -10,7 +10,17 @@ import SearchInput from "./SearchInput";
 import SearchButton from "./SearchButton";
 export default {
 name: "SearchForm",
-  components: {SearchButton, SearchInput}
+  components: { SearchButton, SearchInput },
+  computed: {
+    query() {
+      return this.$store.state.searchQuery
+    }
+  },
+  methods: {
+    onSubmit() {
+      // todo: axios
+    }
+  }
 }
 </script>
 
