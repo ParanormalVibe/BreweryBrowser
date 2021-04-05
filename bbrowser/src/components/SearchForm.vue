@@ -8,6 +8,8 @@
 <script>
 import SearchInput from "./SearchInput";
 import SearchButton from "./SearchButton";
+import axios from "axios"
+
 export default {
 name: "SearchForm",
   components: { SearchButton, SearchInput },
@@ -17,8 +19,10 @@ name: "SearchForm",
     }
   },
   methods: {
-    onSubmit() {
+    async onSubmit() {
       // todo: axios
+      let response = await axios.get('https://api.openbrewerydb.org/breweries/search?query=' + this.query)
+      this.$store.commit('updateSearchResults', response.data)
     }
   }
 }
