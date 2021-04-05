@@ -22,7 +22,13 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: #2B282C !important;
+}
+
 #app-container {
+  display: flex;
+  flex-direction: column;
 
 }
 </style>
