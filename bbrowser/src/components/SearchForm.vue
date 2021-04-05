@@ -19,7 +19,7 @@ name: "SearchForm",
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 50%;
+  width: 600px;
   margin: 0 auto;
 }
 </style>
