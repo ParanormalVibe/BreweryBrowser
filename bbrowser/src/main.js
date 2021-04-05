@@ -14,6 +14,9 @@ const store = createStore({
     mutations: {
         updateSearchQuery(state, query) {
             state.searchQuery = query
+        },
+        updateSearchResults(state, searchResults) {
+            state.searchResults = searchResults
         }
     }
 })
