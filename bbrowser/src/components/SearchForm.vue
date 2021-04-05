@@ -1,5 +1,5 @@
 <template>
-  <div class="search-form input-group mb-3">
+  <div class="search-form input-group mb-5">
     <SearchInput />
     <SearchButton />
   </div>
@@ -20,6 +20,7 @@ name: "SearchForm",
   flex-direction: row;
   justify-content: center;
   width: 600px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
