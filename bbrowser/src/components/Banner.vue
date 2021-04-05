@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img alt="Brewery Browser Logo" src="../assets/default.svg">
+    <img class="banner" alt="Brewery Browser Logo" src="../assets/logo.svg">
   </div>
 </template>
 
@@ -11,5 +11,7 @@ name: "Banner"
 </script>
 
 <style scoped>
-
+  .banner {
+    width: 100%;
+  }
 </style>
