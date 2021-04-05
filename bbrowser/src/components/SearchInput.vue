@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <input type="text" class="form-control" placeholder="" aria-label="Search field">
 </template>
 
 <script>
