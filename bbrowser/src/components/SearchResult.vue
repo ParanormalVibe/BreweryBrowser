@@ -1,24 +1,27 @@
 <template>
   <div class="search-result row">
     <div class="col">
-      <span>{{ breweryName }}</span>
-      <span>{{ breweryPhone }}</span>
-      <span>{{ breweryAddress }}</span>
-      <span v-if="breweryAddress2">{{ breweryAddress2 }}</span>
-      <span v-if="breweryAddress3">{{ breweryAddress3 }}</span>
-      <span>{{ breweryCity }}, {{ breweryState }} {{ breweryPostalCode }}</span>
-      <span v-if="breweryProvince">{{ breweryProvince }}</span>
-      <span>{{ breweryCountry }}</span>
+      <span>{{ brewery.Name }}</span>
+      <span>{{ brewery.Phone }}</span>
+      <span>{{ brewery.Address }}</span>
+      <span v-if="brewery.Address2">{{ brewery.Address2 }}</span>
+      <span v-if="brewery.Address3">{{ brewery.Address3 }}</span>
+      <span>{{ brewery.City }}, {{ brewery.State }} {{ brewery.PostalCode }}</span>
+      <span v-if="brewery.Province">{{ brewery.Province }}</span>
+      <span>{{ brewery.Country }}</span>
     </div>
     <div class="col">
-      <span>{{ breweryType }}</span>
+      <span>{{ brewery.Type }}</span>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "SearchResult"
+  name: "SearchResult",
+  props: {
+    brewery: Object
+  }
 }
 </script>
 
