@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <img class="banner" alt="Brewery Browser Logo" src="../assets/logo.svg">
-  </div>
+  <img class="banner" alt="Brewery Browser Logo" src="../assets/logo.svg">
 </template>
 
 <script>
@@ -12,7 +10,7 @@ name: "Banner"
 
 <style scoped>
   .banner {
-    width: 100%;
-    margin-top: 50px;
+    width: 600px;
+    margin: 50px auto;
   }
 </style>
