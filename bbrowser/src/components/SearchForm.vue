@@ -32,12 +32,12 @@ name: "SearchForm",
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .search-form {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 600px;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
