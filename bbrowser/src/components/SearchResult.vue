@@ -11,6 +11,7 @@
       <span>{{ brewery.country }}</span>
     </div>
     <div class="col right-details">
+      <span>{{ brewery.id }}</span>
       <span>{{ brewery.brewery_type }}</span>
     </div>
   </div>
@@ -40,5 +41,7 @@ span {
 }
 .right-details {
   text-align: right;
+  display: flex;
+  flex-direction: column;
 }
 </style>
