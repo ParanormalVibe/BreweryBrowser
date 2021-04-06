@@ -11,7 +11,7 @@ export default {
   components: {SearchResult},
   computed: {
     results() {
-      return this.$store.state.searchResults
+      return this.$store.getters.currentPage.items
     }
   }
 }
