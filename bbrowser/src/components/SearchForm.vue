@@ -20,7 +20,6 @@ name: "SearchForm",
   },
   methods: {
     async onSubmit() {
-      // todo: axios
       let response = await axios.get('https://api.openbrewerydb.org/breweries/search?query=' + this.query)
       if (response.status !== 200) {
         this.$store.commit('flagQueryError')
