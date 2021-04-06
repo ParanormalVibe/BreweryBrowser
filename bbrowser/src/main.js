@@ -8,6 +8,7 @@ import paginatorLogic from './paginatorLogic'
 const store = createStore({
     state() {
         return {
+            queryHasError: false,
             searchResults: [],
             searchQuery: '',
             paginatorSettings: {
@@ -17,11 +18,19 @@ const store = createStore({
         }
     },
     mutations: {
+        flagQueryError(state) {
+          state.queryHasError = true
+        },
         updateSearchQuery(state, query) {
             state.searchQuery = query
         },
         updateSearchResults(state, searchResults) {
             state.searchResults = searchResults
+            state.paginatorSettings.pageIndex = 1
+            state.queryHasError = false
+        },
+        updatePageNumber(state, pageNumber) {
+            state.paginatorSettings.pageIndex = pageNumber
         }
     },
     getters: {
