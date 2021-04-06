@@ -2,9 +2,10 @@
   <div id="app-container" class="container">
     <Banner />
     <SearchForm />
-    <Paginator v-if="searchResults.length > 0" />
-    <SearchResultList v-if="searchResults.length > 0" />
-    <Paginator v-if="searchResults.length > 0" />
+    <Error v-if="queryHasError" />
+    <Paginator v-if="searchResults.length > 0 && !queryHasError" />
+    <SearchResultList v-if="searchResults.length && !queryHasError> 0" />
+    <Paginator v-if="searchResults.length > 0 && !queryHasError" />
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import Banner from './components/Banner'
 import SearchForm from "./components/SearchForm";
 import SearchResultList from "./components/SearchResultList";
 import Paginator from "./components/Paginator";
+import Error from "./components/Error"
 
 export default {
   name: 'App',
@@ -20,11 +22,15 @@ export default {
     Paginator,
     SearchResultList,
     SearchForm,
-    Banner
+    Banner,
+    Error
   },
   computed: {
     searchResults() {
       return this.$store.state.searchResults
+    },
+    queryHasError() {
+      return this.$store.state.queryHasError
     }
   }
 }
