@@ -2,7 +2,9 @@
   <div id="app-container" class="container">
     <Banner />
     <SearchForm />
+    <Paginator v-if="searchResults.length > 0" />
     <SearchResultList v-if="searchResults.length > 0" />
+    <Paginator v-if="searchResults.length > 0" />
   </div>
 </template>
 
@@ -10,10 +12,12 @@
 import Banner from './components/Banner'
 import SearchForm from "./components/SearchForm";
 import SearchResultList from "./components/SearchResultList";
+import Paginator from "./components/Paginator";
 
 export default {
   name: 'App',
   components: {
+    Paginator,
     SearchResultList,
     SearchForm,
     Banner
