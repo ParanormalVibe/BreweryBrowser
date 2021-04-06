@@ -11,6 +11,7 @@
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "es6-promise": "^4.2.8",
+    "range-inclusive": "^1.0.2",
     "vue": "^3.0.0",
     "vuex": "^4.0.0"
   },
