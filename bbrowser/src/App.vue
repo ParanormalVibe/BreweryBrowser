@@ -2,7 +2,7 @@
   <div id="app-container" class="container">
     <Banner />
     <SearchForm />
-    <SearchResultList />
+    <SearchResultList v-if="searchResults.length > 0" />
   </div>
 </template>
 
@@ -17,6 +17,11 @@ export default {
     SearchResultList,
     SearchForm,
     Banner
+  },
+  computed: {
+    searchResults() {
+      return this.$store.state.searchResults
+    }
   }
 }
 </script>
