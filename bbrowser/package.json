@@ -12,6 +12,7 @@
     "core-js": "^3.6.5",
     "es6-promise": "^4.2.8",
     "range-inclusive": "^1.0.2",
+    "sass": "^1.32.8",
     "vue": "^3.0.0",
     "vuex": "^4.0.0"
   },
@@ -23,7 +24,9 @@
     "babel-eslint": "^10.1.0",
     "bootstrap": "^5.0.0-beta3",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.1"
   },
   "eslintConfig": {
     "root": true,
